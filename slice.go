@@ -1,3 +1,4 @@
+
 package main
 
 import (
@@ -6,7 +7,7 @@ import (
 
 func main() {
 
-  // define , append
+  // 增
   var testSlice []int
   testSlice = append(testSlice, 22)
   testSlice = append(testSlice, 33)
@@ -20,10 +21,16 @@ func main() {
   slice3 := append(slice1,slice2...) // append 追加一个slice时要在后面加...
   fmt.Print("\n",slice3, "\n")
 
-  // delete
+  // 删
   index:=1;
   testSlice=append(testSlice[:index],testSlice[index+1:]...)
   fmt.Print("after delete",testSlice, "\n")
+
+  // 改
+  testSlice[1] = 9999
+  fmt.Print(testSlice)
+
+  // 查
 
   // for range
   for no,value := range testSlice {
